@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <script>
+            var str=prompt("Enter the string: ","");
+            if(isNaN(str)){
+                str=str.toUpperCase()
+                var vowels=["A", "E", "I", "O", "U"]
+                var xx=new Set(vowels)
+                for(var i=0;i<str.length;i++){
+                    if(xx.has(str[i])) break;
+                }
+                if(i<str.length) alert("The Vowel from left most side is at : "+ (i+1));
+                else alert("The vowel is not at all present");
+            }
+            else{
+                str=str.split("").reverse().join("")
+                alert("The everse of the "+ str + " is "+ str);
+            }
+        </script>
+    </body>
+</html>
